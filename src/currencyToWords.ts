@@ -55,7 +55,7 @@ const CurrencyToWords = (value: string) => {
     }
   };
 
-  const twoDigits = (twoDigitNumber: number) => {
+  const twoDigits = (twoDigitNumber: number) : string=> {
     switch (twoDigitNumber) {
       case 10:
         return "ten";
@@ -146,4 +146,4 @@ const CurrencyToWords = (value: string) => {
   return completeDollarWords(dollarInWords) + completeCentsWords(centsInWords);
 };
 
-export default currencyToWords;
+export default CurrencyToWords;
