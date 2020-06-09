@@ -20,21 +20,21 @@ npm install currency-to-words --save
 ### Usage
 
 ```js
-import currencyToWord from 'currency-to-words'
+import {CurrencyToWords} from 'currency-to-words'
 ```
 
 ```js
-const words = currencyToWord(0.01);
+const words = CurrencyToWords(0.01);
 ```
 
 OR
 
 ```js
-const words = currencyToWord('105');
+const words = CurrencyToWords('105');
 ```
 
 # TODO
-- [] Supporting other languages
+- [ ] Supporting other languages
 
 
 
