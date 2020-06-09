@@ -24,7 +24,7 @@ const CurrencyToWords = (value) => {
         numericGroup++;
       }
       return result;
-    } catch  {
+    } catch (e) {
       throw new Error("Exception in parsing");
     }
   };
