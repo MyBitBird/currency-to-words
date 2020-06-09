@@ -2,9 +2,11 @@ import {  oneDigit,  twoDigits,  threeDigits,  GetNumericGroupTitle} from "./con
 
 const CurrencyToWords = (value) => {
   const convertToWords = (currency) => {
-    if (!currency) return "invalid input";
+    if (currency !=0 && !currency) return "invalid input";
+
     let numericGroup = 1; // thousands , millions
     let result = "";
+
     try {
       while (currency != 0) {
         let tempResult = "";
@@ -22,7 +24,7 @@ const CurrencyToWords = (value) => {
         numericGroup++;
       }
       return result;
-    } catch (e) {
+    } catch  {
       throw new Error("Exception in parsing");
     }
   };
