@@ -1,6 +1,6 @@
 ## Currency To Words
 
-## `Introduction
+## Introduction
 
 Converts Currency Numbers (including decimal points) into words.
 
