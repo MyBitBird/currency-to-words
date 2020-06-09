@@ -1,6 +1,6 @@
 {
   "name": "currency-to-words",
-  "version": "0.2.7",
+  "version": "0.1.3",
   "description": "Converting currency to words",
   "main": "src/currencyToWords.jsx",
   "keywords": [
