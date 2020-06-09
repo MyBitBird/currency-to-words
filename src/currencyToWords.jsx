@@ -1,9 +1,8 @@
-import {oneDigit , twoDigits , threeDigits} from './converter'
+import {  oneDigit,  twoDigits,  threeDigits,  GetNumericGroupTitle} from "./converter";
 
 const CurrencyToWords = (value) => {
-  
   const convertToWords = (currency) => {
-    if(!currency) return 'invalid input';
+    if (!currency) return "invalid input";
     let numericGroup = 1; // thousands , millions
     let result = "";
     try {
@@ -17,29 +16,14 @@ const CurrencyToWords = (value) => {
 
         if (tempResult)
           //for numbers like 1,000,001 that thousands part is empty
-          result = `${tempResult} ${GetNumericGroupTitle(
-            numericGroup
-          )} ${result}`.trim();
+          result = `${tempResult} ${GetNumericGroupTitle(numericGroup)} ${result}`.trim();
 
-        currency = Math.floor( currency /1000);
+        currency = Math.floor(currency / 1000);
         numericGroup++;
       }
       return result;
     } catch (e) {
       throw new Error("Exception in parsing");
-    }
-  };
-
-
-  const GetNumericGroupTitle = (numericGroup) => {
-    switch (numericGroup) {
-      default:
-      case 1: //hundreds doesn't need
-        return "";
-      case 2:
-        return "thousand";
-      case 3:
-        return "million";
     }
   };
 
@@ -53,7 +37,8 @@ const CurrencyToWords = (value) => {
     return ` and ${cents} ` + (cents === "one" ? "cent" : "cents");
   };
 
-  const currency = (value+'').replace(" ", "").split(".");
+  const currency = (value + "").replace(" ", "").split(".");
+
   const dollarInWords = convertToWords(Number.parseInt(currency[0]));
   const centsInWords =
     currency.length == 2
