@@ -1,8 +1,8 @@
 {
   "name": "currency-to-words",
-  "version": "0.1.3",
+  "version": "0.2.7",
   "description": "Converting currency to words",
-  "main": "./src/currencyToWords.jsx",
+  "main": "src/currencyToWords.jsx",
   "keywords": [
     "currency to words",
     "number to words currency",
@@ -19,17 +19,17 @@
   },
   "license": "MIT",
   "private": false,
-  "dependencies": {
-    
-    
-  },
+  "dependencies": {},
   "scripts": {
     "build": "webpack"
   },
-  "peerDependencies": {
-    
-  },
+  "peerDependencies": {},
   "devDependencies": {
-    
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "webpack-cli": "^3.3.11",
+    "webpack": "^4.6.0"
   }
 }
