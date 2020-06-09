@@ -1,6 +1,6 @@
 {
   "name": "currency-to-words",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Converting currency to words",
   "main": "./src/currencyToWords.jsx",
   "keywords": [
@@ -20,13 +20,8 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
-    "typescript": "^3.9.5"
+    
+    
   },
   "scripts": {
     "build": "webpack"
