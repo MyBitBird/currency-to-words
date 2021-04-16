@@ -28,17 +28,17 @@ const convertToWords = (currency) => {
   }
 };
 
-const completeDollarWords = (dollars) => {
+const completeDollarWords = (dollars, dollarAmountWord = "dollar") => {
   if (!dollars) dollars = "zero";
-  return dollars + (dollars === "one" ? " dollar" : " dollars");
+  return dollars + (dollars === "one" ? ` ${dollarAmountWord}` : ` ${dollarAmountWord}s`);
 };
 
-const completeCentsWords = (cents) => {
+const completeCentsWords = (cents, centAmountWord = "cent") => {
   if (!cents) return "";
-  return ` and ${cents} ` + (cents === "one" ? "cent" : "cents");
+  return ` and ${cents} ` + (cents === "one" ? `${centAmountWord}` : `${centAmountWord}s`);
 };
 
-export const CurrencyToWords = (value) => {
+export const CurrencyToWords = (value, dollarText = "dollar", centText = "cent") => {
   
   const currency = (value + "").replace(" ", "").split(".");
 
@@ -52,7 +52,7 @@ export const CurrencyToWords = (value) => {
         )
       : "";
 
-  return completeDollarWords(dollarInWords) + completeCentsWords(centsInWords);
+  return completeDollarWords(dollarInWords, dollarText) + completeCentsWords(centsInWords, centText);
 };
 
 export default CurrencyToWords;
